@@ -7,17 +7,27 @@ body {
     overflow: hidden;
 }
 
-* {
-    box-sizing: border-box;
-}
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
 
 #root {
-    height: 100vh;
+    user-select: none;
+    height: 100%;
 }
 
 .container {
     display: grid;
     grid-template: repeat(8, 1fr) / 2fr 2fr 2.5fr 1.5fr;
+    grid-template-areas:
+    'academy js php php'
+    'academy js php php'
+    'academy js php php'
+    'academy js net events'
+    'qa js net events'
+    'qa js net blog'
+    'qa java net blog'
+    'qa java net contacts';
     margin-top: 4%;
     margin-left: auto;
     margin-right: auto;
@@ -43,7 +53,7 @@ img.logo {
 }
 
 .academy {
-    grid-area: 1/1/5/2;
+    grid-area: academy;
 }
 
 .academy .front {
@@ -53,7 +63,7 @@ img.logo {
 }
 
 .qa {
-    grid-area: 5/1/9/2;
+    grid-area: qa;
 }
 
 .qa .front {
@@ -67,21 +77,25 @@ img.logo {
 }
 
 .js {
-    grid-area: 1/2/7/3;
+    grid-area: js;
 }
 
 .js .front {
+    content: "J ";
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     background-color: #f7cf69;
     font-weight: bold;
     font-size: 5vw;
-    padding-right: 0.1em;
+}
+
+.js .front span {
+    padding-right: .1em;
 }
 
 .java {
-    grid-area: 7/2/9/3;
+    grid-area: java;
 }
 
 .java .front {
@@ -95,7 +109,7 @@ img.logo {
 }
 
 .php {
-    grid-area: 1/3/4/5;
+    grid-area: php;
 }
 
 .php .front {
@@ -109,7 +123,7 @@ img.logo {
 }
 
 .net {
-    grid-area: 4/3/9/4;
+    grid-area: net;
 }
 
 .net .front {
@@ -135,7 +149,7 @@ img.logo {
 }
 
 .events {
-    grid-area: 4/4/6/5;
+    grid-area: events;
 }
 
 .events .front {
@@ -143,7 +157,7 @@ img.logo {
 }
 
 .blog {
-    grid-area: 6/4/8/5;
+    grid-area: blog;
 }
 
 .blog .front {
@@ -151,7 +165,7 @@ img.logo {
 }
 
 .contacts {
-    grid-area: 8/4/9/5;
+    grid-area: contacts;
 }
 
 .contacts .front {
@@ -243,10 +257,8 @@ img.logo {
     transition: visibility 1s;
 }
 
-.menu-dropdown div{
-    /*width: 60%;*/
+.menu-dropdown div {
     font-size: .95em;
-    /*margin: .4em .4em;*/
     margin-top: .4rem;
     text-align: left;
     color: #000;
@@ -257,7 +269,6 @@ img.logo {
     border-width: 0;
     color: gray;
     background-color: #abb4be;
-    /*margin: 4px 3px .5em;*/
 }
 
 span.username {
@@ -279,6 +290,7 @@ span.username {
     margin: 0 auto;
     display: block;
     fill: #bec9da;
+    cursor: pointer;
 }
 
 #svg-1:hover {
@@ -289,4 +301,36 @@ img.nav-logo {
     grid-column: 4;
     height: 42px;
     margin-left: 5%;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        height: 70%;
+        display: grid;
+        grid-template: repeat(16, 1fr) / repeat(2, 1fr);
+        grid-template-areas:
+        'academy js'
+        'academy js'
+        'academy js'
+        'academy js'
+        'qa js'
+        'qa js'
+        'qa java'
+        'qa java'
+        'php php'
+        'php php'
+        'php php'
+        'net events'
+        'net events'
+        'net blog'
+        'net blog'
+        'net contacts';
+    }
+    html,
+    body,
+    root {
+       height: 100vh;
+    }
+
+
 }

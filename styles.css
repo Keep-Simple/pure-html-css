@@ -198,11 +198,24 @@ img.logo {
 }
 
 .nav-menu-wrapper {
+    cursor: pointer;
     width: 35px;
     height: 35px;
     grid-column: 17;
     align-self: center;
     justify-self: end;
+}
+
+.menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 35px;
+    outline: 0;
+    text-align: center;
+    background-color: orange;
+    font-size: large;
 }
 
 .menu:focus {
@@ -216,12 +229,12 @@ img.logo {
 
 .menu-dropdown {
     background-color: #ffffff;
-    box-shadow: 5px 5px 5px 5px grey;
-    width: 15%;
+    box-shadow: 10px 10px 41px 0 rgba(0, 0, 0, 0.75);
+    width: 12rem;
     line-height: normal;
-    padding: 10px;
-    right: 9%;
-    top: 6.3%;
+    padding: 1rem;
+    right: 11%;
+    top: 5.6%;
     pointer-events: auto;
     position: absolute;
     z-index: 1;
@@ -230,17 +243,21 @@ img.logo {
     transition: visibility 1s;
 }
 
-.menu-dropdown span {
-    display: block;
+.menu-dropdown div{
+    /*width: 60%;*/
+    font-size: .95em;
+    /*margin: .4em .4em;*/
+    margin-top: .4rem;
     text-align: left;
-    margin-top: 10px;
     color: #000;
 }
 
 .line {
-    margin: 4px 3px;
-    border: 1px solid #abb4be;
-    border-radius: 5px;
+    height: 2px;
+    border-width: 0;
+    color: gray;
+    background-color: #abb4be;
+    /*margin: 4px 3px .5em;*/
 }
 
 span.username {

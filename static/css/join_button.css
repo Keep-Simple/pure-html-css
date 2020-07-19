@@ -9,15 +9,15 @@ a {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: royalblue;
+    color: rgba(45,153,255);
     text-decoration: none;
     font-size: 1.5em;
     display: inline-block;
-    font-family: Montserrat;
+    /*font-family: Montserrat;*/
     text-transform: uppercase;
     padding: 0.5em 2em;
     border-radius: .3em;
-    border: 2px solid royalblue;
+    border: 2px solid rgba(45,153,255);
     transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
 }
 a::before {
@@ -28,7 +28,7 @@ a::before {
     left: 0;
     right: 100%;
     bottom: 0;
-    background: royalblue;
+    background: rgba(45,153,255);
     transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
     z-index: -1;
 }

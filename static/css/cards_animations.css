@@ -1,0 +1,94 @@
+.flip-container {
+    z-index: 5;
+    background-color: transparent;
+    perspective: 2000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.7s ease-in;
+    transform-style: preserve-3d;
+}
+
+.flip-inner:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-container .back,
+.flip-container .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-container .back {
+    transform: rotateY(180deg);
+}
+
+.contacts .back i {
+    font-size: 2.2rem;
+    color: dimgrey;
+    margin-right: .35rem;
+    margin-left: .35rem
+}
+
+.contacts .back i:hover {
+    color: royalblue;
+}
+
+.animation-container {
+    position: relative;
+    background-color: transparent;
+    height: 100%;
+    transition: all 0.7s ease-in;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.sandwich-part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bs-group .front {
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    z-index: 2;
+}
+
+.bs-group .back {
+    visibility: hidden;
+    text-align: left;
+    font-weight: bold;
+    overflow-y: auto;
+    font-size: .9rem;
+}
+
+.java .front {
+    transition: .2s;
+    z-index: 2;
+}
+
+.java .back {
+    visibility: hidden;
+}
+
+.animation-container:hover .front {
+    margin-left: 100%;
+}
+
+.animation-container:hover .back {
+    visibility: visible;
+}
+
+

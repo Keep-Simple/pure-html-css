@@ -4,5 +4,7 @@
 @import './footer.css';
 @import './notifications.css';
 @import './footer.css';
+@import './cards_animations.css';
 @import "./adaptive.css";
+@import "./scrollbar.css";
 @import './font_awesome.css';

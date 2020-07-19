@@ -4,7 +4,7 @@
     }
 
     .content {
-        grid-template: repeat(20, minmax(30px, 1fr)) / repeat(12, minmax(30px, 1fr));
+        grid-template: repeat(20, minmax(10px, 1fr)) / repeat(12, minmax(20px, 1fr));
         grid-template-areas: "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js contacts contacts contacts" "academy academy academy academy academy js js js js contacts contacts contacts" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa";
     }
 

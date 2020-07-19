@@ -5,8 +5,8 @@
     <title>Frontend</title>
     <meta name="description" content="Task 4 for Binary Studio Academy"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="https://use.fontawesome.com/06123ed7e8.js"></script>
+    <link rel="stylesheet" href="static/styles.css"/>
+    <link rel="stylesheet" href="static/css/all.css"/>
 </head>
 <body>
 <div class="container">
@@ -134,14 +134,19 @@
         <div class="footer">© Powered By Keep Simple</div>
     </div>
     <div class="notifications">
-        <div class="notification">
+        <div class="notification" style="background-color: #faa045;">
             <div class="notification-icon">
-                <i class="far fa-check-circle"></i>
+                <i style="color: white" class="fas fa-exclamation-triangle fa-lg"></i>
             </div>
-            <div class="notification-content">
-                <p class="n-type">Well Done</p>
-                <p class="n-message">Profile was updated</p>
+            <div class="notification-head">Warning</div>
+            <div class="notification-text">Deadline is coming</div>
+        </div>
+        <div class="notification" style="background-color: #66bb6a;">
+            <div class="notification-icon">
+                <i style="color: white" class="fas fa-check-circle fa-lg"></i>
             </div>
+            <div class="notification-head">Well Done</div>
+            <div class="notification-text">Profile was updated</div>
         </div>
     </div>
 </div>

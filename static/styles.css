@@ -259,14 +259,13 @@ img.logo {
 }
 
 .menu:focus .menu-dropdown {
-    opacity: 1;
     visibility: visible;
-    transition: .7s;
+    opacity: 1;
 }
 
 .menu-dropdown {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
     background-color: #ffffff;
     width: 12em;
     box-shadow: 0 0 35px 6px rgba(163,163,163,0.6);
@@ -278,7 +277,7 @@ img.logo {
     top: .3em;
     pointer-events: auto;
     z-index: 1;
-    transition: visibility .7s;
+    transition: all .7s ease;
 }
 
 .menu-dropdown .menu-item {
@@ -326,12 +325,17 @@ span.username {
 #svg-1:hover {
     transform: rotate(360deg);
     fill: #8f99a4;
-    transition: .75s;
+    transition: ease-in-out .75s;
+}
+
+img.nav-logo:hover {
+    transform: scale(1.2);
 }
 
 img.nav-logo {
     grid-column: 3;
     height: 42px;
+    transition: ease-in-out .7s;
 }
 
 .notifications {
@@ -355,6 +359,7 @@ img.nav-logo {
     grid-template-areas:
             'grid_icon grid_notif_head'
             'grid_icon grid_notif_text';
+    transition: ease-in-out .35s;
 }
 
 .notification-head {
@@ -378,7 +383,6 @@ img.nav-logo {
 .notification:hover {
     transform: scale(1.05);
     opacity: 1;
-    transition: .35s;
 }
 
 

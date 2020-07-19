@@ -9,7 +9,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: all 0.7s ease-in;
+    transition: all .55s ease-in-out;
     transform-style: preserve-3d;
 }
 
@@ -62,33 +62,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .2s;
+    transition: ease-in-out .4s;
     z-index: 2;
 }
 
 .bs-group .back {
-    visibility: hidden;
     text-align: left;
     font-weight: bold;
     overflow-y: auto;
     font-size: .9rem;
 }
 
-.java .front {
-    transition: .2s;
-    z-index: 2;
-}
-
-.java .back {
-    visibility: hidden;
-}
-
-.animation-container:hover .front {
+.bs-group .animation-container:hover .front {
     margin-left: 100%;
 }
 
-.animation-container:hover .back {
-    visibility: visible;
+.java .front {
+    transition: ease-in-out .6s;
+    z-index: 2;
 }
 
+.java .animation-container:hover .front {
+    margin-top: 100%;
+}
 
+.php .front {
+    transition: ease-in-out .3s;
+    z-index: 2;
+}
+
+.php .animation-container:hover .front {
+    transform: translate(100%, -100%);
+    margin-bottom: 100%;
+}
+
+.net .front {
+    transition: ease-in-out .3s;
+    z-index: 2;
+}
+
+.net .animation-container:hover .front {
+    transform: translate(100%, 100%);
+    margin-bottom: 100%;
+}

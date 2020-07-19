@@ -5,6 +5,7 @@
     display: grid;
     grid-auto-rows: 5em;
     grid-gap: 1em;
+    z-index: 10;
 }
 
 .notification {

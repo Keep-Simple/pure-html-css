@@ -5,6 +5,7 @@ body {
     overflow: hidden;
 }
 
+
 .container {
     display: grid;
     grid-template: 55px 1fr / 1fr;
@@ -216,8 +217,52 @@ img.logo {
     backface-visibility: hidden;
 }
 
+.back::-webkit-scrollbar {
+    width: .25rem;
+}
+
+.back::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 4px;
+    outline: 1px solid slategrey;
+}
+
 .back {
+    text-align: left;
+    font-weight: bold;
+    overflow-y: auto;
+    font-size: 1.15rem;
     transform: rotateY(180deg);
+}
+
+.back > p {
+    padding: 0 0 1rem 1rem;
+}
+
+.events .back,
+.blog .back,
+.contacts .back {
+    text-align: left;
+    font-weight: bold;
+    overflow-y: auto;
+    font-size: .9rem;
+}
+
+.contacts .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts .back i {
+    font-size: 2.2rem;
+    color: dimgrey;
+    margin-right: .35rem;
+    margin-left: .35rem
+}
+
+.contacts .back i:hover {
+    color: royalblue;
 }
 
 .nav-menu-wrapper {
@@ -268,7 +313,7 @@ img.logo {
     opacity: 0;
     background-color: #ffffff;
     width: 12em;
-    box-shadow: 0 0 35px 6px rgba(163,163,163,0.6);
+    box-shadow: 0 0 35px 6px rgba(163, 163, 163, 0.6);
     border-radius: 5px;
     line-height: normal;
     padding: 1em;
@@ -329,13 +374,13 @@ span.username {
 }
 
 img.nav-logo:hover {
-    transform: scale(1.2);
+    transform: scale(1.12);
 }
 
 img.nav-logo {
     grid-column: 3;
     height: 42px;
-    transition: ease-in-out .7s;
+    transition: ease-in-out .25s;
 }
 
 .notifications {
@@ -392,7 +437,6 @@ img.nav-logo {
     }
 
     .content {
-        width: 90%;
         grid-template: repeat(20, minmax(30px, 1fr)) / repeat(12, minmax(30px, 1fr));
         grid-template-areas: "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js events events events" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js blog blog blog" "academy academy academy academy academy js js js js contacts contacts contacts" "academy academy academy academy academy js js js js contacts contacts contacts" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "java java java java java java php php php php php php" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa" "net net net net net net qa qa qa qa qa qa";
     }

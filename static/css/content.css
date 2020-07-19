@@ -151,3 +151,15 @@ img.logo {
     justify-content: center;
     align-items: center;
 }
+
+.academy .back {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.join-button {
+    padding: 1rem;
+    background-color: royalblue;
+    cursor: pointer;
+}

@@ -2,7 +2,7 @@
     align-items: center;
     user-select: none;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     background-color: #ffffff;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
@@ -19,6 +19,7 @@
 }
 
 .nav-menu-wrapper {
+    z-index: 10;
     cursor: pointer;
     width: 35px;
     height: 35px;

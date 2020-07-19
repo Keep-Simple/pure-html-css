@@ -13,6 +13,7 @@ a {
     text-decoration: none;
     font-size: 1.5em;
     display: inline-block;
+    cursor: pointer;
     /*font-family: Montserrat;*/
     text-transform: uppercase;
     padding: 0.5em 2em;

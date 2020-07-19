@@ -13,5 +13,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/Keep-Simple/bsa-5-html-css#readme"
+  "homepage": "https://bitbucket.org/Keep-Simple/bsa-5-html-css#readme",
+  "dependencies": {
+    "static": "^2.0.0"
+  }
 }

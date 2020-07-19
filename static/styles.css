@@ -7,13 +7,13 @@ body {
 
 .container {
     display: grid;
-    grid-template: 42px 1fr / 1fr;
+    grid-template: 55px 1fr / 1fr;
     height: 100vh;
     width: 100vw;
 }
 
 .header {
-    align-self: start;
+    align-items: center;
     user-select: none;
     width: 100%;
     z-index: 2;
@@ -38,7 +38,7 @@ body {
 }
 
 .content {
-    padding-top: 58px;
+    padding-top: 45px;
     width: 77%;
     margin: 0 auto;
     display: grid;
@@ -224,9 +224,9 @@ img.logo {
     cursor: pointer;
     width: 35px;
     height: 35px;
-    grid-column: 17;
+    grid-column: 18;
     align-self: center;
-    justify-self: end;
+    justify-self: center;
 }
 
 .menu {
@@ -248,29 +248,37 @@ img.logo {
 .menu:focus .menu-dropdown {
     opacity: 1;
     visibility: visible;
+    transition: .7s;
 }
 
 .menu-dropdown {
     background-color: #ffffff;
-    box-shadow: 10px 10px 41px 0 rgba(0, 0, 0, 0.75);
     width: 12em;
+    box-shadow: 0 0 35px 6px rgba(163,163,163,0.6);
+    border-radius: 5px;
     line-height: normal;
     padding: 1em;
-    right: 11%;
-    top: 5.6%;
+    position: relative;
+    right: 12em;
+    top: .3em;
     pointer-events: auto;
-    position: absolute;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 1s;
+    transition: .7s;
 }
 
-.menu-dropdown div {
+.menu-dropdown > div {
+    width: 30%;
     font-size: .92em;
     margin-top: .4em;
     text-align: left;
     color: #000;
+    transition: .1s;
+}
+
+.menu-dropdown > div:hover {
+    transform: scale(1.05);
 }
 
 .line {
@@ -289,9 +297,9 @@ span.username {
 .svg-container {
     display: flex;
     align-items: center;
-    grid-column: 16;
+    grid-column: 17;
     height: 100%;
-    justify-self: end;
+    justify-self: center;
 }
 
 #svg-1 {
@@ -303,11 +311,13 @@ span.username {
 }
 
 #svg-1:hover {
+    transform: rotate(360deg);
     fill: #8f99a4;
+    transition: .75s;
 }
 
 img.nav-logo {
-    grid-column: 4;
+    grid-column: 3;
     height: 42px;
 }
 
@@ -353,12 +363,12 @@ img.nav-logo {
 }
 
 .notification:hover {
-    /*background-color: rgba(7, 149, 66, .8);*/
+    transform: scale(1.05);
     opacity: 1;
-    transition: 0.5s;
+    transition: .35s;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1250px) {
     .container {
         font-size: 15px !important;
     }
@@ -370,18 +380,25 @@ img.nav-logo {
     }
 
     img.nav-logo {
-        grid-column: 3;
+        grid-column: 2;
     }
 
     .nav-menu-wrapper {
-        grid-column: 18;
+        grid-column: 19;
     }
 
     .svg-container {
-        grid-column: 17;
+        grid-column: 18;
         justify-self: start;
     }
 }
+
+@media (max-width: 800px) {
+    .svg-container {
+        grid-column: 17;
+    }
+}
+
 
 @media (max-width: 615px) {
     .container {
@@ -410,5 +427,9 @@ img.nav-logo {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .blog .front::before {
+        content: "Grab News from\00a0";
     }
 }
